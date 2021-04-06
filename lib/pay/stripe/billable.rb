@@ -173,6 +173,8 @@ module Pay
 
         charge.update(
           amount: object.amount,
+          currency: object.currency,
+          application_fee_amount: object.application_fee_amount,
           card_last4: object.payment_method_details.card.last4,
           card_type: object.payment_method_details.card.brand,
           card_exp_month: object.payment_method_details.card.exp_month,
