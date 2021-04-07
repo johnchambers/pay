@@ -41,6 +41,10 @@ module Pay
     def self.signing_secret
       find_value_by_name(:stripe, :signing_secret)
     end
+    
+    def self.connect_signing_secret
+      find_value_by_name(:stripe, :connect_signing_secret)
+    end
 
     def self.configure_webhooks
       Pay::Webhooks.configure do |events|
